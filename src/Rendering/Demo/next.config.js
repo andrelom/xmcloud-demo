@@ -1,8 +1,7 @@
 const jssConfig = require('./src/temp/config')
-const { getPublicUrl } = require('@sitecore-jss/sitecore-jss-nextjs/utils')
 const plugins = require('./src/temp/next-config-plugins') || {}
 
-const url = getPublicUrl()
+const url = process.env.PUBLIC_URL || process.env.VERCEL_URL
 
 console.log('##################################################', url)
 
