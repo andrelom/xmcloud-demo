@@ -1,4 +1,4 @@
-import nookies from 'nookies'
+import { setCookie } from 'nookies'
 import { createUtcDate } from '@/core/dates'
 import { createHandler } from '@/core/api'
 
@@ -22,7 +22,7 @@ export default createHandler({
     const value = data.username.trim()
     const expires = getSessionTimeout()
 
-    nookies.set({ res }, name, value, {
+    setCookie({ res }, name, value, {
       path: '/',
       expires: expires,
     })
