@@ -2,21 +2,26 @@ const jssConfig = require('./src/temp/config')
 const { getPublicUrl } = require('@sitecore-jss/sitecore-jss-nextjs/utils')
 const plugins = require('./src/temp/next-config-plugins') || {}
 
-const publicUrl = getPublicUrl()
+const url = getPublicUrl()
+
+console.log('##################################################', url)
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  // Set basePath.
+  basePath: '',
+
   // Set assetPrefix to our public URL
-  assetPrefix: publicUrl,
+  assetPrefix: url,
 
   // Allow specifying a distinct distDir when concurrently running app in a container
   distDir: process.env.NEXTJS_DIST_DIR || '.next',
 
   // Make the same PUBLIC_URL available as an environment variable on the client bundle
   env: {
-    PUBLIC_URL: publicUrl,
+    PUBLIC_URL: url,
   },
 
   i18n: {
