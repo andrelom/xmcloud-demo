@@ -1,6 +1,7 @@
-import type { NextRequest } from 'next/server'
+import type { NextRequest, NextFetchEvent } from 'next/server'
 
 import { NextResponse } from 'next/server'
+import middleware from 'lib/middleware'
 
 const isHTMLDocument = (req: NextRequest): boolean => {
   return req.headers.get('accept')?.toLowerCase().includes('text/html') ?? false
@@ -35,10 +36,10 @@ export const config = {
   matcher: ['/', '/((?!api/|_next/|sitecore/api/|-/|healthz).*)'],
 }
 
-export default async function handler(req: NextRequest) {
+export default async function handler(req: NextRequest, event: NextFetchEvent) {
   if (isHTMLDocument(req)) {
     // return rewrite(req)
   }
 
-  return NextResponse.next()
+  return await middleware(req, event)
 }
