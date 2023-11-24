@@ -1,0 +1,26 @@
+﻿---
+ID: "e28121e9-a155-4098-92b2-9b2bd33a20a8"
+Parent: "eb4c4889-7823-45ac-a336-4bab8fae836f"
+Template: "e59c145c-cc87-4a16-a6aa-ca0444bb94f9"
+Path: /sitecore/content/Andre Moraes/Demo/Data/Layout/Footer
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T182950Z
+    - ID: "2d822289-1c4d-466a-afcc-13e4f88cb5a9"
+      Hint: copyright
+      Value: Footer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5e05e3fb-4528-4163-8985-f9bf1c2f6607"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T183017Z

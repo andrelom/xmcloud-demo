@@ -17,6 +17,23 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{E0A45FA4-4D42-4CF2-B470-42B3112AF8CE}"
+              p:after="*[1=2]"
+              s:ds="{42DD6DBF-2B90-412C-9D39-F6FB2C3537A3}"
+              s:id="{9FCC47CB-FB52-4399-99BE-78CB63E553EC}"
+              s:par="CSSStyles"
+              s:ph="main"
+              s:ccb="Clear on publish" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20231124T154720Z
@@ -33,7 +50,7 @@ Languages:
         sitecore\DEwCkoi2el
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0929b082-7809-4669-9f26-7c0d951fe408"
+      Value: "c3e8f6ae-ddb2-448e-b44a-88f9ff94a386"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -43,4 +60,4 @@ Languages:
       Value: Demo
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20231124T154743Z
+      Value: 20231124T183727Z

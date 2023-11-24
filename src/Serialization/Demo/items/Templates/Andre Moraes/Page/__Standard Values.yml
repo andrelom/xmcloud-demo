@@ -15,7 +15,22 @@ SharedFields:
     <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{073415D8-1790-442E-90AC-40BC63059533}" />
+        l="{073415D8-1790-442E-90AC-40BC63059533}">
+        <r
+          ds="{8DEC1CB4-FAAA-48FD-85BC-A3EE7E41DDD1}"
+          id="{29EFB723-D2D6-4F29-83D1-C7476181C728}"
+          par="CSSStyles"
+          ph="header"
+          uid="{1FA1121F-5FA4-474C-92E0-4CD3889EDB6A}"
+          ccb="Clear on publish" />
+        <r
+          ds="{E28121E9-A155-4098-92B2-9B2BD33A20A8}"
+          id="{C8AF135A-89EF-4A5D-8D59-6A1F06BC20F3}"
+          par="CSSStyles"
+          ph="footer"
+          uid="{1F1F2695-3D2C-4239-AE4C-74AC354A21A5}"
+          ccb="Clear on publish" />
+      </d>
     </r>
 Languages:
 - Language: en
@@ -35,7 +50,7 @@ Languages:
         sitecore\DEwCkoi2el
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4984e91e-c679-41d7-8f2d-b7e712360710"
+      Value: "9c79c9d2-5e3c-47ea-b4ff-8732a92ecf08"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -45,4 +60,4 @@ Languages:
       Value: $name
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20231124T165407Z
+      Value: 20231124T183446Z

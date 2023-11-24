@@ -1,0 +1,29 @@
+﻿---
+ID: "42dd6dbf-2b90-412c-9d39-f6fb2c3537a3"
+Parent: "e934f7e1-3b5b-4b16-820c-b3cb909bbbc8"
+Template: "8f4273b3-2765-44f1-9030-5724a5131bf5"
+Path: /sitecore/content/Andre Moraes/Demo/Data/Banners/Home Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T182446Z
+    - ID: "8b21c026-94cb-4f8d-96ef-7245061cccc8"
+      Hint: title
+      Value: Lorem ipsum dolor
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "af5da04a-a205-432c-8ec6-5cb52b39d371"
+    - ID: "aee261af-182d-4584-9ab7-877342cb1342"
+      Hint: description
+      Value: Nam justo mauris, suscipit et semper vel, pulvinar sit amet nulla. Donec massa metus, venenatis et urna et, dapibus euismod mauris. Vestibulum porta iaculis erat, ut consectetur justo suscipit a.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T182520Z

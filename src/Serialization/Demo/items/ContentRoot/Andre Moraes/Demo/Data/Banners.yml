@@ -1,0 +1,23 @@
+﻿---
+ID: "e934f7e1-3b5b-4b16-820c-b3cb909bbbc8"
+Parent: "792d95b3-2ab0-4fb7-a19a-6d5728eb53e9"
+Template: "38dd026a-083a-48e9-a479-a58c7265df80"
+Path: /sitecore/content/Andre Moraes/Demo/Data/Banners
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T182436Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0d672f7a-5b49-4620-8d8d-cab730b671ba"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T182436Z

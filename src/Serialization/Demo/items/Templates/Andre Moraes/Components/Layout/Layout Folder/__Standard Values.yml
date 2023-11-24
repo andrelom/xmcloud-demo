@@ -1,0 +1,40 @@
+﻿---
+ID: "6ab8e1b0-f5b3-4734-89b1-f3b3ba8dca18"
+Parent: "dde28573-375a-420d-b7ee-03a7093b5c51"
+Template: "dde28573-375a-420d-b7ee-03a7093b5c51"
+Path: /sitecore/templates/Project/Andre Moraes/Components/Layout/Layout Folder/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: /~/icon/office/32x32/layout.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {9717641F-C8D2-49B1-886F-C7B554E972B5}
+    {E59C145C-CC87-4A16-A6AA-CA0444BB94F9}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T182833Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07462e5e-8bd5-4268-bd97-646ef3ce8ff1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T182915Z
