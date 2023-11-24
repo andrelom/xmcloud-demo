@@ -3,8 +3,6 @@ const plugins = require('./src/temp/next-config-plugins') || {}
 
 const url = process.env.PUBLIC_URL || process.env.VERCEL_URL
 
-console.log('##################################################', url)
-
 /**
  * @type {import('next').NextConfig}
  */
