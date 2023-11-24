@@ -6,7 +6,7 @@ const isHTMLDocument = (req: NextRequest): boolean => {
   return req.headers.get('accept')?.toLowerCase().includes('text/html') ?? false
 }
 
-const rewrite = (req: NextRequest) => {
+export const rewrite = (req: NextRequest) => {
   const url = req.nextUrl.clone()
   const country = req.geo?.country?.toLowerCase() ?? 'global'
 
@@ -37,7 +37,7 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
   if (isHTMLDocument(req)) {
-    return rewrite(req)
+    // return rewrite(req)
   }
 
   return NextResponse.next()
