@@ -37,7 +37,7 @@ const Banner = ({ timestamp, fields }: BannerProps): JSX.Element => {
     <div className="px-4 py-5 my-5 text-center">
       <h1 className="display-1 fw-bold text-body-emphasis">{data?.title?.value}</h1>
       <div className="col-lg-6 mx-auto">
-        <span className="display-6">{timestamp}</span>
+        <div className="lead mb-4">{timestamp}</div>
         <p className="lead mb-4">{data?.description?.value}</p>
         <p className="badge text-bg-warning">Country: {session.country?.toUpperCase()}</p>
         <p>
