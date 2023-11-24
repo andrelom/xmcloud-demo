@@ -1,6 +1,8 @@
 import Result from '@/core/Result'
 import { getHTTPStatusByCode } from '@/core/http-status-codes'
 
+import { WHOOPS } from '@/common/errors'
+
 export type HTTPClientOptions = Omit<RequestInit, 'method' | 'body'> & {
   json?: boolean
   authorization?: string
@@ -11,7 +13,8 @@ export class HTTPClient {
     this.setDefaults(options)
 
     return this.toResult<T>(
-      await fetch(url, {
+      url,
+      await this.fetch(url, {
         ...options,
         method: 'GET',
         headers: this.setHeaders(options),
@@ -23,9 +26,24 @@ export class HTTPClient {
     this.setDefaults(options)
 
     return this.toResult<T>(
-      await fetch(url, {
+      url,
+      await this.fetch(url, {
         ...options,
         method: 'POST',
+        body: options.json ? JSON.stringify(data) : data,
+        headers: this.setHeaders(options),
+      }),
+    )
+  }
+
+  async patch<T = any>(url: URL, data: any, options: HTTPClientOptions = {}): Promise<Result<T>> {
+    this.setDefaults(options)
+
+    return this.toResult<T>(
+      url,
+      await this.fetch(url, {
+        ...options,
+        method: 'PATCH',
         body: options.json ? JSON.stringify(data) : data,
         headers: this.setHeaders(options),
       }),
@@ -36,7 +54,8 @@ export class HTTPClient {
     this.setDefaults(options)
 
     return this.toResult<T>(
-      await fetch(url, {
+      url,
+      await this.fetch(url, {
         ...options,
         method: 'PUT',
         body: options.json ? JSON.stringify(data) : data,
@@ -49,7 +68,8 @@ export class HTTPClient {
     this.setDefaults(options)
 
     return this.toResult<T>(
-      await fetch(url, {
+      url,
+      await this.fetch(url, {
         ...options,
         method: 'DELETE',
         body: options.json ? JSON.stringify({}) : undefined,
@@ -103,7 +123,9 @@ export class HTTPClient {
     }
   }
 
-  private async toResult<T = any>(response: Response) {
+  private async toResult<T = any>(url: URL, response: Response | null) {
+    if (!response) return Result.fail<T>(WHOOPS)
+
     const parsed = await this.parse(response)
 
     if (response.ok && parsed.ok && Result.is(parsed.value)) {
@@ -119,16 +141,28 @@ export class HTTPClient {
     if (Result.is(parsed.value)) {
       result = Result.from<T>(parsed.value)
     } else {
-      result = Result.fail(getHTTPStatusByCode(response.status), { message: parsed.value })
+      result = Result.fail(getHTTPStatusByCode(response.status), { origin: parsed.value })
     }
 
+    const metadata = { url: url.toString(), status: response.status }
+
     if (result.metadata) {
-      result.metadata.status = response.status
+      result.metadata = { ...result.metadata, ...metadata }
     } else {
-      result.metadata = { status: response.status }
+      result.metadata = { ...metadata }
     }
 
     return result
+  }
+
+  private async fetch(url: URL, value: any) {
+    try {
+      return await fetch(url, value)
+    } catch (error) {
+      console.log('HTTP Client', error)
+
+      return null
+    }
   }
 }
 
