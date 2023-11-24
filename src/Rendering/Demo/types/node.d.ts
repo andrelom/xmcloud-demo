@@ -7,6 +7,6 @@ declare namespace NodeJS {
     readonly NODE_ENV: 'development' | 'production' | 'test'
     // Next.js
     readonly PUBLIC_URL: string
-    readonly NEXT_REVALIDATE: string
+    readonly SSG_REVALIDATE_SECONDS: string
   }
 }
