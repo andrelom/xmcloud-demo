@@ -8,10 +8,5 @@ declare namespace NodeJS {
     // Next.js
     readonly PUBLIC_URL: string
     readonly NEXT_REVALIDATE: string
-    readonly NEXT_REVALIDATE_SECRET: string
-    // NextAuth
-    readonly NEXTAUTH_URL: string
-    readonly NEXTAUTH_URL_INTERNAL: string
-    readonly NEXTAUTH_SECRET: string
   }
 }
