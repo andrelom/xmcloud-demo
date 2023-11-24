@@ -26,11 +26,11 @@ const Banner = ({ timestamp, fields }: BannerProps): JSX.Element => {
   const data = fields?.data?.datasource
 
   const src = useMemo(() => {
-    if (session.country === 'global') {
-      return sitecore
-    }
+    const code = session.country?.toUpperCase()
 
-    return `https://flagsapi.com/${session.country}/shiny/64.png`
+    if (session.country === 'global') return sitecore
+
+    return `https://flagsapi.com/${code}/shiny/64.png`
   }, [session.country])
 
   return (
