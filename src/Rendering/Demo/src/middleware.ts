@@ -37,9 +37,11 @@ export const config = {
 }
 
 export default async function handler(req: NextRequest, event: NextFetchEvent) {
+  const res = await middleware(req, event)
+
   if (isHTMLDocument(req)) {
-    // return rewrite(req)
+    return rewrite(req)
   }
 
-  return await middleware(req, event)
+  return res
 }
