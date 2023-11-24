@@ -1,17 +1,3 @@
-export function getURLPath(value: string | null | undefined, lowercase: boolean = true) {
-  if (!value) return ''
-
-  try {
-    const url = new URL(value)
-    const pathname = lowercase ? url.pathname.toLowerCase() : url.pathname
-    const path = url.search ? `${pathname}?${url.search}` : pathname
-
-    return path
-  } catch {
-    return ''
-  }
-}
-
 export function createURL(
   pathname: string,
   options?: {
@@ -23,9 +9,9 @@ export function createURL(
 
   if (!origin) {
     if (typeof window === 'undefined') {
-      origin = process.env.NEXT_BASE_URL
+      origin = process.env.PUBLIC_URL
     } else {
-      origin = process.env.NEXT_PUBLIC_BASE_URL
+      origin = process.env.NEXT_PUBLIC_URL
     }
   }
 

@@ -6,8 +6,14 @@ const getStaticProps: GetStaticProps = async (context) => {
   const props = await sitecorePagePropsFactory.create(context)
 
   return {
-    props: { ...props, country: context.params?.country },
     notFound: props.notFound,
+    props: {
+      ...props,
+      session: {
+        country: context.params?.country,
+        username: context.params?.username,
+      },
+    },
   }
 }
 

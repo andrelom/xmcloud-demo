@@ -9,11 +9,14 @@ const isHTMLDocument = (req: NextRequest): boolean => {
 
 export const rewrite = (req: NextRequest) => {
   const url = req.nextUrl.clone()
+  const cookie = req.cookies.get('next.session.user')
   const country = req.geo?.country?.toLowerCase() ?? 'global'
+  const username = cookie?.value ?? 'anonymous'
 
   let pathname = ''
 
   pathname += `/${country}`
+  pathname += `/${username}`
   pathname += `/${url.pathname}`
 
   url.pathname = pathname.replace(/\/+/gi, '/')

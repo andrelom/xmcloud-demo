@@ -16,10 +16,13 @@ import NotFound from '@/containers/NotFound'
 import SessionContext from '@/components/SessionContext'
 
 export type RootSitecorePageProps = SitecorePageProps & {
-  country: string | undefined
+  session: {
+    country: string | undefined
+    username: string | undefined
+  }
 }
 
-const Root = ({ notFound, componentProps, layoutData, country }: RootSitecorePageProps): JSX.Element => {
+const Root = ({ notFound, componentProps, layoutData, session }: RootSitecorePageProps): JSX.Element => {
   useEffect(() => {
     handleEditorFastRefresh()
   }, [])
@@ -34,7 +37,7 @@ const Root = ({ notFound, componentProps, layoutData, country }: RootSitecorePag
   return (
     <ComponentPropsContext value={componentProps}>
       <SitecoreContext componentFactory={componentBuilder.getComponentFactory({ isEditing })} layoutData={layoutData}>
-        <SessionContext data={{ country }}>
+        <SessionContext data={session}>
           {isComponentRendering ? (
             <EditingComponentPlaceholder rendering={layoutData.sitecore.route} />
           ) : (
