@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs'
-import { signIn } from './api'
+import { signIn, signOut } from './api'
 import { useSession } from '@/components/SessionContext'
 
 export type HeaderProps = any & {
@@ -13,7 +13,7 @@ export type HeaderProps = any & {
 const Header = ({ data }: HeaderProps): JSX.Element => {
   const session = useSession()
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSignInClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
 
     const input = prompt('What is your Username?')
@@ -34,16 +34,28 @@ const Header = ({ data }: HeaderProps): JSX.Element => {
     })
   }
 
+  const handleSignOutClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+
+    signOut().then((result) => {
+      if (!result.ok) {
+        alert('Whoops!')
+      } else {
+        window.location.reload()
+      }
+    })
+  }
+
   const identity = useMemo(() => {
     if (!session.username || session.username === 'anonymous') {
       return (
-        <button className="nav-link fw-bold py-1 px-0 active" onClick={handleClick}>
+        <button className="nav-link fw-bold py-1 px-0 active" onClick={handleSignInClick}>
           Sign In
         </button>
       )
     }
 
-    return <div>{session.username}</div>
+    return <button onClick={handleSignOutClick}>{session.username}</button>
   }, [session.username])
 
   return (
