@@ -1,0 +1,9 @@
+schema: ${SITECORE_API_HOST}/sitecore/api/graph/edge?sc_apikey=${SITECORE_API_KEY}
+config:
+  skipTypename: true
+documents: 'src/**/*.graphql'
+generates:
+  ./.generated/models.ts:
+    plugins:
+      - typescript
+      - typescript-operations

@@ -1,0 +1,10 @@
+query GetFooter($datasource: String!, $language: String!) {
+  datasource: item(path: $datasource, language: $language) {
+    id
+    ... on Footer {
+      copyright {
+        value
+      }
+    }
+  }
+}

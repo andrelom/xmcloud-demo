@@ -1,0 +1,37 @@
+{
+  "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Content",
+  "references": ["Project"],
+  "items": {
+    "includes": [
+      {
+        "name": "ContentRoot",
+        "path": "/sitecore/content/Andre Moraes",
+        "allowedPushOperations": "CreateOnly",
+        "rules": [
+          {
+            "path": "/Demo/Home",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Demo/Media",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Demo/Data",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Demo/Dictionary",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Demo/Settings/Site Grouping/Demo",
+            "allowedPushOperations": "CreateOnly",
+            "scope": "ItemAndDescendants"
+          }
+        ]
+      }
+    ]
+  }
+}

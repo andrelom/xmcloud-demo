@@ -1,0 +1,38 @@
+﻿---
+ID: "073415d8-1790-442e-90ac-40bc63059533"
+Parent: "3ff77cd0-eb66-49c9-96f4-165d5fa09479"
+Template: "e4e11508-04a4-4b0b-a263-5201f811c9cd"
+Path: /sitecore/layout/Layouts/Project/Andre Moraes/Default Layout
+SharedFields:
+- ID: "80334869-86dc-4472-aa89-44cf1b2f6c9b"
+  Hint: Placeholders
+  Value: |
+    {31ED7DDF-E8F8-441F-8600-547996BAFC60}
+    {253F0749-39C6-448F-9BF7-43D4E03673B7}
+    {285036F6-E1D2-4164-8C6A-FE6C52FCFBAC}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T165335Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "33d3888e-ebdd-4386-bf31-b62206d07373"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T165352Z

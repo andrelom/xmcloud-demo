@@ -1,0 +1,37 @@
+﻿---
+ID: "1fa1af2a-365b-4da7-a48a-5e53c3f6f451"
+Parent: "bfe53a8a-ca18-401f-ab7c-cac702d0fd37"
+Template: "bfe53a8a-ca18-401f-ab7c-cac702d0fd37"
+Path: /sitecore/templates/Project/Andre Moraes/Page Design Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {BFE53A8A-CA18-401F-AB7C-CAC702D0FD37}
+    {1105B8F8-1E00-426B-BF1F-C840742D827B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231124T154637Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bce9b61c-5b29-4577-839b-cd96084b4ff6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\DEwCkoi2el
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231124T154640Z

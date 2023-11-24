@@ -1,0 +1,8 @@
+schema:
+- '${GRAPH_QL_ENDPOINT}':
+    headers:
+      sc_apikey: '${SITECORE_API_KEY}'
+documents: "**/*.graphql"
+plugins:
+  - typescript-operations
+  - typescript-react-apollo

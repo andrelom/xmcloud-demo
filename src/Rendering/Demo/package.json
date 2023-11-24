@@ -1,0 +1,123 @@
+{
+  "name": "demo",
+  "description": "The Demo project.",
+  "version": "21.2.3",
+  "private": true,
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "author": {
+    "name": "Sitecore Corporation",
+    "url": "https://jss.sitecore.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitecore/jss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sitecore/jss/issues"
+  },
+  "license": "Apache-2.0",
+  "config": {
+    "appName": "Demo",
+    "rootPlaceholders": [
+      "header",
+      "main",
+      "footer"
+    ],
+    "sitecoreConfigPath": "/App_Config/Include/zzz",
+    "graphQLEndpointPath": "/sitecore/api/graph/edge",
+    "language": "en",
+    "templates": [
+      "nextjs",
+      "nextjs-sxa",
+      "nextjs-personalize",
+      "nextjs-multisite"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "ts-node --project tsconfig.scripts.json scripts/bootstrap.ts",
+    "build": "npm-run-all --serial graphql:let bootstrap next:build",
+    "graphql:update": "ts-node --project tsconfig.scripts.json ./scripts/fetch-graphql-introspection-data.ts",
+    "install-pre-push-hook": "ts-node --project tsconfig.scripts.json ./scripts/install-pre-push-hook.ts",
+    "jss": "jss",
+    "lint": "eslint ./src/**/*.tsx ./src/**/*.ts ./scripts/**/*.ts",
+    "next:build": "next build",
+    "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "next:start": "next start",
+    "scaffold": "ts-node --project tsconfig.scripts.json scripts/scaffold-component.ts",
+    "start:connected": "npm-run-all --serial graphql:let bootstrap --parallel next:dev start:watch-components",
+    "start:production": "npm-run-all --serial graphql:let bootstrap next:build next:start",
+    "start:watch-components": "ts-node --project tsconfig.scripts.json scripts/generate-component-builder/index.ts --watch",
+    "graphql:codegen": "graphql-codegen --require dotenv/config --config ./codegen.yml",
+    "graphql:let": "graphql-let --require dotenv/config"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.2",
+    "@sitecore-feaas/clientside": "^0.3.17",
+    "@sitecore-jss/sitecore-jss-nextjs": "~21.3.1",
+    "@sitecore/engage": "^1.3.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vercel/kv": "^0.2.2",
+    "bootstrap": "^5.3.2",
+    "cssnano": "^6.0.1",
+    "font-awesome": "^4.7.0",
+    "graphql": "~16.8.0",
+    "graphql-tag": "^2.12.6",
+    "next": "^13.1.6",
+    "next-localization": "^0.12.0",
+    "nookies": "^2.5.2",
+    "openid-client": "^5.4.3",
+    "postcss-mixins": "^9.0.4",
+    "precss": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.67.0",
+    "sass-alias": "^1.0.5",
+    "slick-carousel": "^1.8.1",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/import-types-preset": "^2.2.6",
+    "@graphql-codegen/plugin-helpers": "^5.0.1",
+    "@graphql-codegen/typed-document-node": "^5.0.1",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@graphql-typed-document-node/core": "^3.1.1",
+    "@sitecore-jss/sitecore-jss-cli": "~21.3.1",
+    "@sitecore-jss/sitecore-jss-dev-tools": "~21.3.1",
+    "@tailwindcss/forms": "^0.5.4",
+    "@types/node": "^20.6.2",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-slick": "^0.23.10",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "autoprefixer": "^10.4.15",
+    "chalk": "~4.1.2",
+    "chokidar": "~3.5.3",
+    "constant-case": "^3.0.4",
+    "cross-env": "~7.0.3",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^13.1.5",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-yaml": "^0.5.0",
+    "graphql-let": "^0.18.6",
+    "npm-run-all": "~4.1.5",
+    "postcss": "^8.4.30",
+    "postcss-import": "^15.1.0",
+    "prettier": "^3.0.1",
+    "tailwindcss": "^3.3.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "~5.2.2",
+    "yaml-loader": "^0.8.0"
+  }
+}

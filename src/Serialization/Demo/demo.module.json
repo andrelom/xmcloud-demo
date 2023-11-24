@@ -1,0 +1,39 @@
+{
+  "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Project",
+  "references": [],
+  "items": {
+    "includes": [
+      {
+        "name": "Templates",
+        "path": "/sitecore/templates/Project/Andre Moraes",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "Layouts",
+        "path": "/sitecore/layout/Layouts/Project/Andre Moraes",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "Renderings",
+        "path": "/sitecore/layout/Renderings/Project/Andre Moraes",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "PlaceholderSettings",
+        "path": "/sitecore/layout/Placeholder Settings/Project/Andre Moraes",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "Media",
+        "path": "/sitecore/media library/Project/Andre Moraes",
+        "allowedPushOperations": "CreateOnly",
+        "scope": "SingleItem"
+      }
+    ]
+  }
+}
