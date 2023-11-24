@@ -22,7 +22,9 @@ const getStaticProps: GetStaticComponentProps = async (rendering, layout) => {
     language: language,
   })
 
-  return { data: result.datasource ?? {} }
+  return {
+    data: result.datasource ?? {},
+  }
 }
 
 export default getStaticProps
