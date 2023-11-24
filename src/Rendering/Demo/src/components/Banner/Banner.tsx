@@ -39,6 +39,7 @@ const Banner = ({ timestamp, fields }: BannerProps): JSX.Element => {
       <div className="col-lg-6 mx-auto">
         <span className="display-6">{timestamp}</span>
         <p className="lead mb-4">{data?.description?.value}</p>
+        <p className="badge text-bg-warning">Country: {session.country}</p>
         <p>
           <Image src={src} width={64} height={64} alt="Sitecore" />
         </p>
