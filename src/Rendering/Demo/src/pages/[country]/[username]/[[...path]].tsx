@@ -9,7 +9,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const getStaticProps = await import('@/root/getStaticProps')
 
   return Object.assign(await getStaticProps.default(context), {
-    revalidate: parseInt(process.env.NEXT_REVALIDATE || '60'),
+    revalidate: parseInt(process.env.SSG_REVALIDATE_SECONDS || '60'),
   })
 }
 
