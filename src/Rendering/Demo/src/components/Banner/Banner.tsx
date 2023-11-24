@@ -30,7 +30,7 @@ const Banner = ({ timestamp, fields }: BannerProps): JSX.Element => {
 
     if (session.country === 'global') return sitecore
 
-    return `https://flagsapi.com/${code}/shiny/64.png`
+    return `https://flagsapi.com/${code}/flat/64.png`
   }, [session.country])
 
   return (
